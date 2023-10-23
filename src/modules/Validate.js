@@ -31,4 +31,29 @@ export default class Validate {
       ZIPField.setCustomValidity(constraints[country][1]);
     }
   }
+
+  static password() {
+    console.log('kaar kard');
+    const password = document.getElementById('password');
+    const constraint = /^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$/;
+    const customValidity = 'Your password must contain a minimum of 8 characters, at least one letter and one number';
+    if (constraint.test(password.value)) {
+      password.setCustomValidity('');
+    } else {
+      password.setCustomValidity(customValidity);
+    }
+  }
+
+  static passwordConfirm() {
+    console.log('kaar kard');
+    const password = document.getElementById('password');
+    const passwordConfirm = document.getElementById('password-confirmation');
+    const customValidity = 'Your confirmation password does not match password';
+
+    if (password.value === passwordConfirm.value) {
+      passwordConfirm.setCustomValidity('');
+    } else {
+      passwordConfirm.setCustomValidity(customValidity);
+    }
+  }
 }

@@ -9,18 +9,17 @@
 </head>
 <body>
     <div class="container">
-        <p>Required fields are marked with an asterisk (*).</p>
         <div class="formfield">
             <form>
                 <label>
-                  Email*
+                  Email: <span class="req">*</span>
                   <input name="submitted-email" type="email" required/>
                 </label>
             </form>
         </div>
         <div class="formfield">
             <form>
-                <label for="Country">Country* </label>
+                <label for="Country">Country: <span class="req">*</span> </label>
                 <select id="Country" required>
                   <option value="ir">Iran</option>
                   <option value="af">Afghanistan</option>
@@ -36,18 +35,18 @@
         <div class="formfield">
             <form>
                 <label>
-                  Password*
-                  <input name="password" required/>
+                  Password: <span class="req">*</span>
+                  <input name="password" id="password" required/>
                 </label>
             </form>
             <form>
                 <label>
-                  Confirm Password*
-                  <input name="password-confirmation"required/>
+                  Confirm Password: <span class="req">*</span>
+                  <input name="password-confirmation" id="password-confirmation" required/>
                 </label>
             </form>
         </div> 
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="">Submit</button>
         <div class="error.active"></div>
     </div>
 </body>

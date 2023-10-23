@@ -15,13 +15,20 @@ body {
     border-radius: 6px;
 }
 
-input, label {
-    display:block;
+.formfield {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+.req {
+    color: red;
 }
 
 button[type="submit"] {
+    width: fit-content;
     border-radius: 5px;
-    background-color: rgb(192, 199, 199);
+    background-color: rgb(209, 215, 215);
 }
 
 .active {

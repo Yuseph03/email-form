@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_UI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/UI */ \"./src/modules/UI.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', _modules_UI__WEBPACK_IMPORTED_MODULE_0__[\"default\"].loadHomePage);\n\n//# sourceURL=webpack://email-form/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_UI__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/UI */ \"./src/modules/UI.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', _modules_UI__WEBPACK_IMPORTED_MODULE_0__[\"default\"].loadHomePage);\n\n\n//# sourceURL=webpack://email-form/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ UI)\n/* harmony export */ });\nclass UI {\n  static loadHomePage() {}\n}\n\n//# sourceURL=webpack://email-form/./src/modules/UI.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ UI)\n/* harmony export */ });\n/* harmony import */ var _Validate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Validate */ \"./src/modules/Validate.js\");\n\n\nclass UI {\n  static loadHomePage() {\n    document.getElementById('Country').onchange = _Validate__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ZIP;\n    document.getElementById('ZIP').oninput = _Validate__WEBPACK_IMPORTED_MODULE_0__[\"default\"].ZIP;\n    document.getElementById('password').oninput = _Validate__WEBPACK_IMPORTED_MODULE_0__[\"default\"].password;\n    document.getElementById('password-confirmation').oninput = _Validate__WEBPACK_IMPORTED_MODULE_0__[\"default\"].confirmPassword;\n  }\n}\n\n\n//# sourceURL=webpack://email-form/./src/modules/UI.js?");
+
+/***/ }),
+
+/***/ "./src/modules/Validate.js":
+/*!*********************************!*\
+  !*** ./src/modules/Validate.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Validate)\n/* harmony export */ });\nclass Validate {\n  static ZIP() {\n    const constraints = {\n      ir: [\n        '^\\\\d{5}-\\\\d{5}$',\n        'Iranian ZIPs must have exactly 8 digits: e.g. NNNNN-NNNNN',\n      ],\n      tr: [\n        '^\\\\d{5}$',\n        'Turkish ZIPs must have exactly 4 digits: e.g. NNNNN',\n      ],\n      iq: [\n        '^\\\\d{5}$',\n        'Iraqi ZIPs must have exactly 4 digits: e.g. NNNNN',\n      ],\n      af: [\n        '^^\\\\d{4}$',\n        'Afghani ZIPs must have exactly 4 digits: e.g. NNNNN',\n      ],\n    };\n\n    const country = document.getElementById('Country').value;\n\n    const ZIPField = document.getElementById('ZIP');\n\n    const constraint = new RegExp(constraints[country][0], '');\n\n    if (constraint.test(ZIPField.value)) {\n      ZIPField.setCustomValidity('');\n    } else {\n      ZIPField.setCustomValidity(constraints[country][1]);\n    }\n  }\n\n  static password() {\n    console.log('kaar kard');\n    const password = document.getElementById('password');\n    const constraint = /^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$/;\n    const customValidity = 'Your password must contain a minimum of 8 characters, at least one letter and one number';\n    if (constraint.test(password.value)) {\n      password.setCustomValidity('');\n    } else {\n      password.setCustomValidity(customValidity);\n    }\n  }\n\n  static passwordConfirm() {\n    console.log('kaar kard');\n    const password = document.getElementById('password');\n    const passwordConfirm = document.getElementById('password-confirmation');\n    const customValidity = 'Your confirmation password does not match password';\n\n    if (password.value === passwordConfirm.value) {\n      passwordConfirm.setCustomValidity('');\n    } else {\n      passwordConfirm.setCustomValidity(customValidity);\n    }\n  }\n}\n\n\n//# sourceURL=webpack://email-form/./src/modules/Validate.js?");
 
 /***/ })
 
