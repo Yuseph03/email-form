@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .container {
@@ -16,6 +17,11 @@ body {
 
 input, label {
     display:block;
+}
+
+button[type="submit"] {
+    border-radius: 5px;
+    background-color: rgb(192, 199, 199);
 }
 
 .active {
