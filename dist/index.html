@@ -8,6 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <div class="formfield">
+            <form method="get">
+                <label>
+                  Email:
+                  <input name="submitted-email" type="email" />
+                </label>
+            </form>
+        </div>
+        <div class="formfield">
+            <form method="get">
+               <label>
+                  Country:
+                  <input name="submitted-country" autocomplete="country" />
+                </label>
+            </form>
+            <form method="get">
+                <label>
+                  ZIP:
+                  <input name="submitted-zip" autocomplete="zip" />
+                </label>
+            </form>
+        </div>  
+        <div class="formfield">
+            <form method="get">
+                <label>
+                  Password:
+                  <input name="password"/>
+                </label>
+            </form>
+            <form method="get">
+                <label>
+                  Confirm Password:
+                  <input name="password-confirmation"/>
+                </label>
+            </form>
+        </div> 
+        <div class="error.active"></div>
+    </div>
 </body>
 </html>

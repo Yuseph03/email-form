@@ -1,6 +1,31 @@
-.container {
-    width: 50%;
-    margin: auto;
-    background-color: grey;
-    border-radius: 7px;
+body {
+    display: flex;
+    justify-content: center;
 }
+
+.container {
+    margin-top: 8em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1em;
+    padding: 25px;
+    background-color: rgb(244, 241, 241);
+    border-radius: 6px;
+}
+
+input, label {
+    display:block;
+}
+
+.active {
+    visibility: block;
+}
+
+.error {
+    visibility: none;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: rgb(233, 186, 186);
+}
+
