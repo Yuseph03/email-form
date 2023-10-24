@@ -18,13 +18,9 @@ export default class Validate {
         'Afghani ZIPs must have exactly 4 digits: e.g. NNNNN',
       ],
     };
-
     const country = document.getElementById('Country').value;
-
     const ZIPField = document.getElementById('ZIP');
-
     const constraint = new RegExp(constraints[country][0], '');
-
     if (constraint.test(ZIPField.value)) {
       ZIPField.setCustomValidity('');
     } else {
@@ -33,9 +29,8 @@ export default class Validate {
   }
 
   static password() {
-    console.log('kaar kard');
     const password = document.getElementById('password');
-    const constraint = /^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$/;
+    const constraint = '^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$';
     const customValidity = 'Your password must contain a minimum of 8 characters, at least one letter and one number';
     if (constraint.test(password.value)) {
       password.setCustomValidity('');
@@ -44,8 +39,7 @@ export default class Validate {
     }
   }
 
-  static passwordConfirm() {
-    console.log('kaar kard');
+  static confirmPassword() {
     const password = document.getElementById('password');
     const passwordConfirm = document.getElementById('password-confirmation');
     const customValidity = 'Your confirmation password does not match password';

@@ -4,50 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>email-form</title>
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="formfield">
-            <form>
-                <label>
-                  Email: <span class="req">*</span>
-                  <input name="submitted-email" type="email" required/>
-                </label>
-            </form>
-        </div>
-        <div class="formfield">
-            <form>
-                <label for="Country">Country: <span class="req">*</span> </label>
-                <select id="Country" required>
-                  <option value="ir">Iran</option>
-                  <option value="af">Afghanistan</option>
-                  <option value="tr">Türkiye</option>
-                  <option value="iq">Iraq</option>
-                </select>
-            </form>
-            <form>
-                <label for="ZIP">ZIP (optional)</label>
-                <input type="text" id="ZIP" required/>
-            </form>
-        </div>  
-        <div class="formfield">
-            <form>
-                <label>
-                  Password: <span class="req">*</span>
-                  <input name="password" id="password" required/>
-                </label>
-            </form>
-            <form>
-                <label>
-                  Confirm Password: <span class="req">*</span>
-                  <input name="password-confirmation" id="password-confirmation" required/>
-                </label>
-            </form>
-        </div> 
-        <button type="submit" onclick="">Submit</button>
-        <div class="error.active"></div>
+        <form id="form">
+            <div class="formfield">
+                    <label>
+                      Email:<span class="req">*</span>
+                      <input name="submitted-email" type="email" placeholder="name@example.com" required/>
+                    </label>
+            </div>
+            <div class="formfield">
+                    <label for="Country">Country:<span class="req">*</span> </label>
+                    <select id="Country" required>
+                      <option value="ir">Iran</option>
+                      <option value="af">Afghanistan</option>
+                      <option value="tr">Türkiye</option>
+                      <option value="iq">Iraq</option>
+                    </select>
+                    <label for="ZIP">ZIP (optional)</label>
+                    <input type="text" id="ZIP" placeholder="NNNN"/>
+            </div>
+            <div class="formfield">
+                    <label>
+                      Password:<span class="req">*</span>
+                      <input name="password" id="password" required/>
+                    </label>
+                    <label>
+                      Confirm Password:<span class="req">*</span>
+                      <input name="password-confirmation" id="password-confirmation" required/>
+                    </label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </div>
+    <span class="wave">👋</span>
 </body>
 </html>
