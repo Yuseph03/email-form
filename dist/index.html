@@ -15,31 +15,33 @@
     <div class="container">
         <form id="form">
             <div class="formfield">
-                    <label>
+                    <label for="email">
                       Email:<span class="req">*</span>
-                      <input name="submitted-email" type="email" placeholder="name@example.com" required/>
                     </label>
+                    <input name="email" id="email" type="email" placeholder="name@example.com" required/>
             </div>
             <div class="formfield">
-                    <label for="Country">Country:<span class="req">*</span> </label>
+                    <label for="Country">
+                      Country:<span class="req">*</span>
+                    </label>
                     <select id="Country" required>
                       <option value="ir">Iran</option>
                       <option value="af">Afghanistan</option>
                       <option value="tr">Türkiye</option>
                       <option value="iq">Iraq</option>
                     </select>
-                    <label for="ZIP">ZIP (optional)</label>
+                    <label for="ZIP">
+                      ZIP (optional)
+                    </label>
                     <input type="text" id="ZIP" placeholder="NNNN"/>
             </div>
             <div class="formfield">
-                    <label>
+                    <label for="password"> 
                       Password:<span class="req">*</span>
-                      <input name="password" id="password" required/>
                     </label>
-                    <label>
-                      Confirm Password:<span class="req">*</span>
-                      <input name="password-confirmation" id="password-confirmation" required/>
-                    </label>
+                    <input name="password" id="password" required/>
+                    <label for="password-confirmation">Confirm Password:<span class="req">*</span></label>
+                    <input name="password-confirmation" id="password-confirmation" required/>
             </div>
             <button type="submit">Submit</button>
         </form>

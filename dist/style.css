@@ -1,3 +1,7 @@
+:root {
+    --url: url(https://img.icons8.com/?size=100&id=sz8cPVwzLrMP&format=png);
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -15,14 +19,9 @@ body {
     border-radius: 6px;
 }
 
-form {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-}
-
 .formfield {
     width: 50%;
-    margin: auto;
+    margin: 1em;
     display: block;
 }
 
@@ -42,16 +41,9 @@ button[type="submit"] {
     background-color: rgb(209, 215, 215);
 }
 
-.error {
-    visibility: none;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: rgb(233, 186, 186);
-}
-
-.fa-check-square-o {
-    color: greenyellow;
-    background-color: rgb(244, 241, 241);
+input {
+    padding-right: 25px;
+    background-size: 20px;
 }
 
 .wave {

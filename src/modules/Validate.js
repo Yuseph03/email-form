@@ -1,5 +1,5 @@
 export default class Validate {
-  static ZIP() {
+  static zip() {
     const constraints = {
       ir: [
         '^\\d{5}-\\d{5}$',
